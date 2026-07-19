@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Di chi è quest'opera? — Diritto d'autore, copyright e licenze</title>
+<link rel="icon" href="logo.svg">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F4F7FC; --warm:#E8EEF9; --card:#FFFFFF;
+  --blu:#123E90;   --blu2:#1F5FC0;  --bluD:#0A2757;  --bluL:rgba(18,62,144,.07);
+  --gold:#B8860B;  --gold2:#D4A017; --goldL:rgba(184,134,11,.08);
+  --ok:#1B6B3A;    --okL:rgba(27,107,58,.09);
+  --warn:#B8860B;  --warnL:rgba(184,134,11,.10);
+  --text:#16233D;  --muted:#4A5B7A; --light:#8A9AB5;
+  --brd:#C9D6EC;   --brd2:#A9BEDE;
+  --shadow:0 2px 12px rgba(18,62,144,.06);
+  --shadow2:0 6px 24px rgba(18,62,144,.10);
+  --maxw:1440px;
+  --body:'Atkinson Hyperlegible',Helvetica,Arial,sans-serif;
+  --head:'Lexend',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--cream); color:var(--text);
+  font-family:var(--body); font-size:18px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:var(--head); line-height:1.25; margin:0}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+a{color:var(--blu)}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 26px}
+.narrow{max-width:820px; margin-left:auto; margin-right:auto}
+
+/* ---------- Brand (wordmark, nessun emblema figurativo) ---------- */
+.brandbar{display:flex; justify-content:center; padding:16px 0 4px}
+.brand{display:inline-flex; align-items:center; gap:11px; text-decoration:none}
+.brand-txt{display:flex; flex-direction:column; text-align:center; line-height:1.2}
+.brand-name{font-family:var(--head); font-size:14px; font-weight:700; letter-spacing:.6px;
+  color:var(--blu); text-transform:uppercase}
+.brand-role{font-family:var(--head); font-size:11.5px; font-weight:500; letter-spacing:.2px; color:var(--muted)}
+
+/* ---------- Header ---------- */
+header.hero{padding:26px 0 22px; text-align:center}
+.eyebrow{font-family:var(--head); font-size:12.5px; font-weight:600; letter-spacing:1.6px;
+  text-transform:uppercase; color:var(--gold); margin-bottom:12px}
+h1{font-size:clamp(30px,4.2vw,50px); font-weight:700; letter-spacing:-.5px; color:var(--bluD)}
+.sub{max-width:660px; margin:14px auto 0; color:var(--muted); font-size:19px}
+
+/* ---------- Topbar nav ---------- */
+nav.topbar{position:sticky; top:0; z-index:60; background:rgba(244,247,252,.94);
+  backdrop-filter:blur(10px); border-bottom:1px solid var(--brd); padding:10px 0}
+.pills{display:flex; flex-wrap:wrap; gap:8px; justify-content:center}
+.pill{font-family:var(--head); font-size:14px; font-weight:500; padding:8px 15px; border-radius:999px;
+  border:1px solid var(--brd); background:var(--card); color:var(--muted); cursor:pointer;
+  transition:.16s; line-height:1.3}
+.pill:hover{border-color:var(--blu2); color:var(--blu)}
+.pill.active{background:var(--blu); border-color:var(--blu); color:#fff; font-weight:600}
+.pill:focus-visible,.opt:focus-visible,.cc-tog:focus-visible,.fc:focus-visible,
+.btn:focus-visible,.caso-btn:focus-visible{outline:3px solid var(--gold2); outline-offset:2px}
+
+/* ---------- Sezioni ---------- */
+section.sec{display:none; padding:34px 0 60px; animation:fade .3s ease}
+section.sec.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.sec-head{max-width:820px; margin:0 auto 26px}
+.sec-num{font-family:var(--head); font-size:12.5px; font-weight:600; letter-spacing:1.4px;
+  text-transform:uppercase; color:var(--gold); margin-bottom:8px}
+h2{font-size:clamp(25px,3vw,35px); color:var(--bluD); font-weight:700; letter-spacing:-.3px}
+.sec-head p{margin-top:12px; color:var(--muted); font-size:18.5px}
+
+/* ---------- Card ---------- */
+.card{background:var(--card); border:1px solid var(--brd); border-radius:16px;
+  padding:26px 28px; box-shadow:var(--shadow); margin-bottom:20px}
+.card h3{font-size:21px; color:var(--blu); margin-bottom:10px; font-weight:600}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:20px}
+.grid3{display:grid; grid-template-columns:repeat(auto-fit,minmax(205px,1fr)); gap:18px}
+
+/* ---------- Fact box ---------- */
+.fact{background:var(--goldL); border-left:4px solid var(--gold); border-radius:0 12px 12px 0;
+  padding:16px 20px; margin:18px 0}
+.fact strong{color:var(--gold)}
+.quote{background:var(--bluL); border-left:4px solid var(--blu2); border-radius:0 12px 12px 0;
+  padding:16px 20px; margin:18px 0; font-style:italic}
+.quote .src{display:block; font-style:normal; font-size:15px; color:var(--muted); margin-top:8px}
+
+/* ---------- Consegna: l'idea diventa azione ---------- */
+.azione{background:linear-gradient(180deg,#fff,var(--warm)); border:1px solid var(--brd2);
+  border-radius:16px; padding:24px 28px; margin:26px 0 6px; box-shadow:var(--shadow)}
+.azione-tag{display:inline-flex; align-items:center; gap:8px; font-family:var(--head);
+  font-size:12.5px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase;
+  color:var(--gold); margin-bottom:10px}
+.azione h4{font-size:19px; color:var(--bluD); margin-bottom:8px}
+.azione ul{margin:10px 0 0; padding-left:22px; color:var(--muted)}
+.azione li{margin-bottom:6px}
+textarea.impegno{width:100%; margin-top:14px; font-family:var(--body); font-size:18px;
+  padding:12px 14px; border:1px solid var(--brd2); border-radius:10px; background:#fff;
+  color:var(--text); resize:vertical; min-height:82px; line-height:1.55}
+textarea.impegno:focus{outline:none; border-color:var(--blu2); box-shadow:0 0 0 3px var(--bluL)}
+.saved{font-size:14.5px; color:var(--ok); margin-top:8px; min-height:20px; font-family:var(--head)}
+
+/* ---------- Player video ---------- */
+.vblock{max-width:820px; margin:0 auto 26px}
+.vwrap{position:relative; border-radius:16px; overflow:hidden;
+  background:#0A2757; box-shadow:var(--shadow2)}
+.vratio{position:relative; padding-top:56.25%}
+.vratio iframe{position:absolute; inset:0; width:100%; height:100%; border:0; pointer-events:none}
+.vclick{position:absolute; inset:0; cursor:pointer; background:transparent}
+.vcover{position:absolute; inset:0; cursor:pointer}
+.vthumb{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+.vcover-in{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center;
+  justify-content:center; gap:12px; text-align:center; padding:26px; color:#fff;
+  background:linear-gradient(160deg,rgba(18,62,144,.86),rgba(10,39,87,.93))}
+.vcover-in h4{font-size:19px; max-width:520px; line-height:1.35}
+.vcover-in .vchan{font-family:var(--head); font-size:12.5px; letter-spacing:1.2px;
+  text-transform:uppercase; color:var(--gold2)}
+.vcap{font-size:15.5px; color:var(--muted); margin:12px 4px 0; text-align:center}
+.vctrl{display:flex; align-items:center; gap:14px; padding:12px 16px; background:#0A2757; color:#fff}
+.vctrl button{background:none; border:0; color:#fff; cursor:pointer; display:flex; padding:4px}
+.vbar{flex:1; height:6px; background:rgba(255,255,255,.22); border-radius:99px; cursor:pointer; position:relative}
+.vfill{position:absolute; left:0; top:0; bottom:0; background:var(--gold2); border-radius:99px; width:0}
+.vtime{font-family:var(--head); font-size:13.5px; color:#C9D6EC; min-width:96px; text-align:right}
+
+/* ---------- Costruttore licenza CC ---------- */
+.ccbox{display:grid; grid-template-columns:minmax(260px,320px) 1fr; gap:26px; align-items:start}
+.cc-togs{display:flex; flex-direction:column; gap:12px}
+.cc-tog{display:flex; gap:14px; align-items:flex-start; text-align:left; width:100%;
+  background:var(--card); border:1.5px solid var(--brd); border-radius:14px; padding:15px 17px;
+  cursor:pointer; font-family:var(--body); font-size:16.5px; color:var(--text); transition:.16s}
+.cc-tog:hover{border-color:var(--blu2)}
+.cc-tog.on{border-color:var(--blu); background:var(--bluL); box-shadow:0 0 0 3px rgba(18,62,144,.06)}
+.cc-tog.fixed{border-color:var(--gold); background:var(--goldL); cursor:default}
+.cc-tog.off{opacity:.44}
+.cc-ico{flex:0 0 auto; width:34px; height:34px; border-radius:50%; border:2px solid currentColor;
+  display:flex; align-items:center; justify-content:center; font-family:var(--head); font-weight:700;
+  font-size:12px; letter-spacing:.3px; color:var(--muted)}
+.cc-tog.on .cc-ico{color:var(--blu)}
+.cc-tog.fixed .cc-ico{color:var(--gold)}
+.cc-tog b{display:block; font-family:var(--head); font-size:16px; margin-bottom:2px; color:var(--bluD)}
+.cc-tog span.d{font-size:15px; color:var(--muted); line-height:1.5; display:block}
+.cc-out{background:var(--card); border:1px solid var(--brd); border-radius:16px; padding:26px 28px;
+  box-shadow:var(--shadow)}
+.cc-code{font-family:var(--head); font-size:clamp(26px,3.4vw,38px); font-weight:700; color:var(--blu);
+  letter-spacing:.5px; margin-bottom:6px}
+.cc-name{font-size:16.5px; color:var(--muted); margin-bottom:18px}
+.cc-desc{background:var(--warm); border-radius:12px; padding:15px 18px; margin-bottom:18px; font-size:17px}
+.cc-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px}
+.cc-list li{display:flex; gap:11px; align-items:flex-start; font-size:16.5px; line-height:1.5}
+.cc-list li.yes{color:var(--text)}
+.cc-list li.no{color:var(--muted)}
+.cc-list svg{flex:0 0 auto; margin-top:3px}
+
+/* ---------- Semaforo dei casi ---------- */
+.caso{background:var(--card); border:1px solid var(--brd); border-radius:16px; padding:22px 24px;
+  box-shadow:var(--shadow); margin-bottom:16px}
+.caso-q{font-size:18px; margin-bottom:14px}
+.caso-q b{color:var(--bluD)}
+.caso-btns{display:flex; gap:10px; flex-wrap:wrap}
+.caso-btn{font-family:var(--head); font-size:15px; font-weight:500; padding:9px 20px; border-radius:10px;
+  border:1.5px solid var(--brd2); background:#fff; color:var(--muted); cursor:pointer; transition:.16s}
+.caso-btn:hover:not(:disabled){border-color:var(--blu2); color:var(--blu)}
+.caso-btn:disabled{cursor:default}
+.caso-btn.pick-ok{background:var(--okL); border-color:var(--ok); color:var(--ok); font-weight:700}
+.caso-btn.pick-no{background:var(--warnL); border-color:var(--warn); color:var(--warn); font-weight:700}
+.caso-fb{margin-top:14px; padding:14px 17px; border-radius:12px; font-size:16.5px; display:none}
+.caso-fb.show{display:block}
+.caso-fb.good{background:var(--okL); border-left:4px solid var(--ok)}
+.caso-fb.soft{background:var(--warnL); border-left:4px solid var(--warn)}
+.caso-fb b{font-family:var(--head)}
+.tally{font-family:var(--head); font-size:15.5px; color:var(--muted); text-align:center; margin-top:22px}
+
+/* ---------- Flashcard ---------- */
+.fcgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px}
+.fc{background:none; border:0; padding:0; height:212px; perspective:1100px; cursor:pointer; font-family:var(--body)}
+.fc-in{display:block; position:relative; width:100%; height:100%; transform-style:preserve-3d; transition:transform .55s}
+.fc.flip .fc-in{transform:rotateY(180deg)}
+.fc-f,.fc-b{position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden;
+  border-radius:16px; padding:20px; display:flex; flex-direction:column; justify-content:center;
+  border:1px solid var(--brd); box-shadow:var(--shadow)}
+.fc-f{background:var(--card); align-items:center; text-align:center; gap:8px}
+.fc-f b{font-family:var(--head); font-size:20px; color:var(--bluD); line-height:1.3}
+.fc-f i{font-style:normal; font-family:var(--head); font-size:12.5px; letter-spacing:1.2px;
+  text-transform:uppercase; color:var(--gold)}
+.fc-f .hint{font-size:13.5px; color:var(--light); margin-top:6px}
+.fc-b{background:linear-gradient(160deg,var(--blu),var(--bluD)); color:#fff; transform:rotateY(180deg);
+  overflow:auto; text-align:left; justify-content:flex-start; border-color:var(--bluD)}
+.fc-b b{font-family:var(--head); font-size:16px; display:block; margin-bottom:7px; color:var(--gold2)}
+.fc-b span{font-size:15.5px; line-height:1.55; color:#E8EEF9}
+
+/* ---------- Quiz ---------- */
+.quiz{background:var(--card); border:1px solid var(--brd); border-radius:18px; padding:28px 30px;
+  box-shadow:var(--shadow2); max-width:820px; margin:0 auto}
+.qbar{height:7px; background:var(--warm); border-radius:99px; overflow:hidden; margin-bottom:20px}
+.qfill{height:100%; background:linear-gradient(90deg,var(--blu2),var(--blu)); width:0; transition:width .35s}
+.qstep{font-family:var(--head); font-size:13px; font-weight:600; letter-spacing:1.2px;
+  text-transform:uppercase; color:var(--gold); margin-bottom:10px}
+.qtext{font-size:20px; font-family:var(--head); color:var(--bluD); line-height:1.4; margin-bottom:20px}
+.opts{display:flex; flex-direction:column; gap:10px}
+.opt{display:flex; gap:12px; align-items:flex-start; text-align:left; font-family:var(--body);
+  font-size:17px; padding:14px 17px; border:1.5px solid var(--brd); border-radius:12px;
+  background:#fff; color:var(--text); cursor:pointer; transition:.16s; line-height:1.5}
+.opt:hover:not(:disabled){border-color:var(--blu2); background:var(--bluL)}
+.opt:disabled{cursor:default}
+.opt .mark{flex:0 0 auto; width:22px; height:22px; margin-top:1px}
+.opt.good{border-color:var(--ok); background:var(--okL)}
+.opt.soft{border-color:var(--warn); background:var(--warnL)}
+.qfb{margin-top:18px; padding:16px 19px; border-radius:12px; font-size:16.5px; display:none}
+.qfb.show{display:block}
+.qfb.good{background:var(--okL); border-left:4px solid var(--ok)}
+.qfb.soft{background:var(--warnL); border-left:4px solid var(--warn)}
+.btn{font-family:var(--head); font-size:16px; font-weight:600; padding:12px 26px; border-radius:11px;
+  border:0; background:linear-gradient(135deg,var(--gold2),var(--gold)); color:#fff; cursor:pointer;
+  box-shadow:0 3px 12px rgba(184,134,11,.28); transition:.16s; margin-top:18px}
+.btn:hover{transform:translateY(-1px); box-shadow:0 5px 16px rgba(184,134,11,.34)}
+.btn.ghost{background:none; color:var(--blu); border:1.5px solid var(--brd2); box-shadow:none}
+.btn.ghost:hover{border-color:var(--blu); background:var(--bluL); transform:none; box-shadow:none}
+.qend{text-align:center; display:none}
+.qend.show{display:block}
+.ring{width:150px; height:150px; border-radius:50%; margin:0 auto 18px; display:flex;
+  align-items:center; justify-content:center; position:relative}
+.ring::after{content:''; position:absolute; inset:13px; background:var(--card); border-radius:50%}
+.ring span{position:relative; z-index:2; font-family:var(--head); font-size:33px; font-weight:700; color:var(--blu)}
+.medal{font-family:var(--head); font-size:20px; font-weight:600; color:var(--bluD); margin-bottom:8px}
+
+/* ---------- Metacognizione ---------- */
+.meta-q{background:var(--card); border:1px solid var(--brd); border-radius:16px; padding:24px 26px;
+  box-shadow:var(--shadow); margin-bottom:18px}
+.meta-q label{display:block; font-family:var(--head); font-size:18px; color:var(--bluD); margin-bottom:12px}
+
+/* ---------- Modal docenti ---------- */
+.doc-open{position:fixed; right:20px; bottom:20px; z-index:80; font-family:var(--head); font-size:14px;
+  font-weight:600; padding:11px 20px; border-radius:999px; border:1px solid var(--brd2);
+  background:var(--card); color:var(--blu); cursor:pointer; box-shadow:var(--shadow2)}
+.doc-open:hover{background:var(--bluL); border-color:var(--blu)}
+.modal{position:fixed; inset:0; z-index:100; background:rgba(10,39,87,.55); backdrop-filter:blur(4px);
+  display:none; align-items:center; justify-content:center; padding:22px}
+.modal.on{display:flex}
+.modal-in{background:var(--card); border-radius:20px; max-width:800px; width:100%; max-height:86vh;
+  overflow:auto; padding:30px 34px; box-shadow:0 24px 60px rgba(10,39,87,.3)}
+.modal-in h3{font-size:24px; color:var(--bluD); margin-bottom:4px}
+.mtabs{display:flex; gap:8px; flex-wrap:wrap; margin:18px 0 20px; border-bottom:1px solid var(--brd); padding-bottom:14px}
+.mtab{font-family:var(--head); font-size:14.5px; padding:8px 16px; border-radius:9px; border:1px solid var(--brd);
+  background:#fff; color:var(--muted); cursor:pointer}
+.mtab.active{background:var(--blu); border-color:var(--blu); color:#fff; font-weight:600}
+.mpane{display:none}
+.mpane.on{display:block}
+.mpane h4{font-size:17px; color:var(--blu); margin:18px 0 8px}
+.mpane h4:first-child{margin-top:0}
+.mpane ul{padding-left:22px; color:var(--muted); margin:0 0 10px}
+.mpane li{margin-bottom:6px}
+.tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+.tag{font-family:var(--head); font-size:12.5px; font-weight:600; padding:6px 13px; border-radius:999px;
+  background:var(--bluL); color:var(--blu)}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid var(--brd); padding:26px 0 40px; text-align:center; color:var(--light);
+  font-size:14.5px; font-family:var(--head)}
+
+@media (max-width:900px){
+  .ccbox{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  body{font-size:17px}
+  .wrap{padding:0 16px}
+  .card,.azione,.quiz,.cc-out{padding:20px 18px}
+}
+</style>
+</head>
+<body>
+
+<div class="brandbar">
+  <div class="brand">
+    <div class="brand-txt">
+      <span class="brand-name">Scuola Sacra Famiglia</span>
+      <span class="brand-role">Animatore Digitale &middot; Andrea Cerioli</span>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Cittadinanza digitale &middot; Secondaria di I grado</div>
+    <h1>Di chi &egrave; quest'opera?</h1>
+    <p class="sub">Diritto d'autore, copyright e licenze Creative Commons: che cosa puoi
+    davvero usare, copiare, remixare &mdash; e come dirlo agli altri per le tue cose.</p>
+  </div>
+</header>
+
+<nav class="topbar">
+  <div class="wrap">
+    <div class="pills" id="pills"></div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ============ 0 · IL CASO ============ -->
+<section class="sec on" id="s-apri">
+  <div class="sec-head narrow">
+    <div class="sec-num">Sezione 1 &middot; Il caso</div>
+    <h2>Un video tolto dopo undici ore</h2>
+    <p>Prima di qualunque spiegazione, guarda. Poi rispondi a una domanda che, per ora,
+    lasciamo aperta.</p>
+  </div>
+
+  <div data-video="apri"></div>
+
+  <div class="narrow" style="margin-top:26px">
+    <div class="card">
+      <h3>La situazione</h3>
+      <p>Una classe monta un video per la festa di fine anno. Riprese loro, montaggio loro,
+      due settimane di lavoro. Come sottofondo scelgono una canzone famosa. Caricano il video
+      su YouTube alle nove di sera.</p>
+      <p>La mattina dopo il video &egrave; ancora l&igrave;, ma silenzioso: l'audio &egrave; stato
+      rimosso in automatico. Nessuno li ha denunciati, nessuno si &egrave; arrabbiato. Semplicemente,
+      un sistema ha riconosciuto la canzone e ha applicato una regola.</p>
+      <div class="fact">
+        <p><strong>La domanda che teniamo aperta.</strong> Le riprese erano loro. Il montaggio era loro.
+        Non ci guadagnavano un euro. Allora perch&eacute; quella canzone non si poteva usare?
+        E soprattutto: <em>che cosa avrebbero dovuto fare per farla funzionare?</em></p>
+        <p style="margin-top:10px">La risposta completa arriva alla fine del percorso. Da qui in avanti,
+        raccogli i pezzi.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Prima di andare avanti: osserva</h3>
+      <p>Non serve sapere la legge per accorgersi di una cosa. Nel video (o nella situazione qui sopra)
+      ci sono <b>due lavori diversi</b> che si sovrappongono: quello della classe e quello di
+      qualcun altro. Il problema nasce esattamente nel punto in cui si toccano.</p>
+    </div>
+
+    <div class="azione">
+      <div class="azione-tag">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        L'idea diventa azione
+      </div>
+      <h4>Scrivi la tua ipotesi, adesso che non sai ancora</h4>
+      <p>Vale di pi&ugrave; un'ipotesi sbagliata scritta ora che una risposta giusta copiata dopo.
+      In due o tre righe:</p>
+      <ul>
+        <li>secondo te, <b>chi</b> decide se quella canzone si pu&ograve; usare?</li>
+        <li>che cosa sarebbe cambiato se il video fosse rimasto sul telefono, senza pubblicarlo?</li>
+      </ul>
+      <textarea class="impegno" data-key="ipotesi" placeholder="La mia ipotesi di partenza..."></textarea>
+      <div class="saved" data-for="ipotesi"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1 · CHE COS'È ============ -->
+<section class="sec" id="s-cosa">
+  <div class="sec-head narrow">
+    <div class="sec-num">Sezione 2 &middot; Il principio</div>
+    <h2>Che cos'&egrave; il diritto d'autore</h2>
+    <p>Non &egrave; un timbro da chiedere. &Egrave; qualcosa che esiste dal momento esatto in cui
+    l'opera esiste.</p>
+  </div>
+
+  <div data-video="principio"></div>
+
+  <div class="narrow">
+    <div class="card">
+      <h3>Nasce da solo, nell'istante in cui crei</h3>
+      <p>Questa &egrave; la cosa che sorprende di pi&ugrave;: <b>non devi registrare niente</b>.
+      Nel momento in cui scrivi una poesia sul quaderno, scatti una foto, incidi una canzone
+      nella cameretta, quell'opera &egrave; gi&agrave; protetta. Non serve un modulo, non serve
+      pagare, non serve il simbolo &copy;.</p>
+      <p>Vale anche per te. Il tema che hai consegnato la settimana scorsa &egrave; un'opera tua,
+      esattamente come un romanzo &egrave; opera del suo autore. Cambia la fama, non il principio.</p>
+      <div class="fact">
+        <p><strong>Una condizione sola:</strong> l'opera dev'essere <b>espressa</b>, cio&egrave; uscita
+        dalla testa e diventata qualcosa &mdash; scritta, registrata, disegnata, filmata.
+        Un'idea che resta pensiero non &egrave; protetta da nessuno. Le idee sono libere:
+        protetta &egrave; la <b>forma</b> che le dai.</p>
+      </div>
+      <p>Due persone possono scrivere una poesia sullo stesso identico argomento &mdash; l'autunno,
+      la nonna, la partita persa &mdash; e sono due opere diverse, entrambe protette. L'argomento
+      non &egrave; di nessuno; le tue parole sono tue.</p>
+    </div>
+
+    <div class="card">
+      <h3>Due diritti dentro lo stesso diritto</h3>
+      <p>Qui sta il nodo che spiega quasi tutto il resto. Quando crei un'opera ottieni
+      <b>due gruppi di diritti molto diversi</b> fra loro.</p>
+      <div class="grid2" style="margin-top:16px">
+        <div style="background:var(--bluL); border-radius:14px; padding:20px 22px">
+          <h4 style="font-size:17px; color:var(--blu); margin-bottom:8px">Diritti morali</h4>
+          <p style="font-size:16.5px; margin-bottom:10px">Il legame fra te e la tua opera.</p>
+          <ul style="margin:0; padding-left:20px; font-size:16px; color:var(--muted)">
+            <li>essere riconosciuto come autore</li>
+            <li>decidere se e quando pubblicarla</li>
+            <li>opporti a modifiche che la snaturano</li>
+          </ul>
+          <p style="font-size:16px; margin-top:12px"><b>Non si vendono. Non scadono mai.</b>
+          Anche se cedi tutto il resto, l'opera resta tua nel nome.</p>
+        </div>
+        <div style="background:var(--goldL); border-radius:14px; padding:20px 22px">
+          <h4 style="font-size:17px; color:var(--gold); margin-bottom:8px">Diritti patrimoniali</h4>
+          <p style="font-size:16.5px; margin-bottom:10px">Il lato economico dell'opera.</p>
+          <ul style="margin:0; padding-left:20px; font-size:16px; color:var(--muted)">
+            <li>riprodurla e distribuirla</li>
+            <li>diffonderla in pubblico</li>
+            <li>tradurla, adattarla, modificarla</li>
+          </ul>
+          <p style="font-size:16px; margin-top:12px"><b>Si possono cedere</b> (a un editore,
+          a un'etichetta) e <b>durano 70 anni</b> dopo la morte dell'autore.</p>
+        </div>
+      </div>
+      <p style="margin-top:18px">&Egrave; per questo che un cantante pu&ograve; non essere pi&ugrave;
+      il proprietario economico delle sue canzoni, ma resta per sempre il loro autore.
+      Le due cose viaggiano separate.</p>
+    </div>
+
+    <div class="card">
+      <h3>Quando i 70 anni finiscono: il pubblico dominio</h3>
+      <p>Scaduti i diritti patrimoniali, l'opera entra nel <b>pubblico dominio</b>: diventa
+      patrimonio di tutti. Chiunque pu&ograve; stamparla, recitarla, musicarla, venderla,
+      trasformarla. Resta valido solo il diritto morale: l'autore va comunque nominato.</p>
+      <p>&Egrave; il motivo per cui esistono venti edizioni diverse della <em>Divina Commedia</em>
+      e nessuna paga niente a Dante. Ed &egrave; il motivo per cui puoi mettere Beethoven come
+      sottofondo di un video senza che nessuno lo rimuova.</p>
+      <div class="fact">
+        <p><strong>Attenzione all'inganno pi&ugrave; comune.</strong> Beethoven &egrave; in pubblico
+        dominio, ma <b>la registrazione</b> di un'orchestra che suona Beethoven oggi &egrave;
+        un'opera nuova, protetta. La musica &egrave; libera; quella specifica esecuzione no.
+        Vale lo stesso per un film tratto da un romanzo antico o per la fotografia di un quadro
+        del Rinascimento.</p>
+      </div>
+    </div>
+
+    <div class="azione">
+      <div class="azione-tag">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        L'idea diventa azione
+      </div>
+      <h4>Trova un'opera tua e separa i due diritti</h4>
+      <p>Scegli qualcosa che hai fatto davvero: un disegno, un video, un tema, una canzone,
+      una foto. Poi rispondi:</p>
+      <ul>
+        <li>quale <b>diritto morale</b> non vorresti perdere mai, nemmeno regalandola?</li>
+        <li>a quale <b>diritto patrimoniale</b> potresti rinunciare, e in cambio di che cosa?</li>
+      </ul>
+      <textarea class="impegno" data-key="duediritti" placeholder="La mia opera e i suoi due diritti..."></textarea>
+      <div class="saved" data-for="duediritti"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 · DUE VIE ============ -->
+<section class="sec" id="s-duevie">
+  <div class="sec-head narrow">
+    <div class="sec-num">Sezione 3 &middot; Le parole</div>
+    <h2>&laquo;Copyright&raquo; e &laquo;diritto d'autore&raquo; non sono sinonimi</h2>
+    <p>Si usano come se fossero la stessa cosa. Nascono da due idee diverse di che cosa
+    sia un'opera.</p>
+  </div>
+
+  <div class="narrow">
+    <div class="card">
+      <div class="grid2">
+        <div>
+          <h4 style="font-family:var(--head); font-size:18px; color:var(--blu); margin-bottom:10px">Copyright</h4>
+          <p style="font-size:16.5px">Alla lettera: <b>diritto di copia</b>. Nasce nel mondo anglosassone
+          e mette al centro <b>l'opera come bene economico</b>: chi ha il diritto di riprodurla e
+          di ricavarne denaro. Il titolare pu&ograve; benissimo essere un'azienda che l'autore
+          non l'ha mai incontrato.</p>
+        </div>
+        <div>
+          <h4 style="font-family:var(--head); font-size:18px; color:var(--gold); margin-bottom:10px">Diritto d'autore</h4>
+          <p style="font-size:16.5px">&Egrave; la tradizione europea e italiana. Mette al centro
+          <b>la persona che ha creato</b>. Da qui nascono i diritti morali, che nel copyright
+          puro hanno molto meno peso: l'opera &egrave; considerata un prolungamento di chi l'ha fatta.</p>
+        </div>
+      </div>
+      <p style="margin-top:18px">Oggi i due sistemi si sono avvicinati parecchio, ma la differenza
+      di sguardo resta. In Italia la legge di riferimento &egrave; la <b>Legge 633 del 1941</b>,
+      ancora in vigore e aggiornata molte volte.</p>
+      <div class="quote">
+        Un'opera creata in Italia &egrave; protetta anche in Giappone, in Brasile, in Canada,
+        senza fare assolutamente nulla.
+        <span class="src">&Egrave; l'effetto della Convenzione di Berna, firmata nel 1886 e oggi
+        adottata da oltre 180 Paesi: protezione automatica, senza formalit&agrave;.</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Il simbolo &copy; serve ancora a qualcosa?</h3>
+      <p>Non &egrave; obbligatorio e non &egrave; lui a creare la protezione. Ma resta utile:
+      &egrave; un <b>avviso</b>. Dice a chi passa &laquo;questa cosa ha un proprietario, e ha un nome&raquo;.
+      Toglie a chi copia la scusa di non essersene accorto.</p>
+      <p>Molto pi&ugrave; utile, oggi, &egrave; l'operazione opposta: dire in modo chiaro che cosa
+      <b>permetti</b>. &Egrave; esattamente il problema che le licenze Creative Commons sono nate
+      per risolvere &mdash; ed &egrave; la prossima sezione.</p>
+    </div>
+
+    <div class="azione">
+      <div class="azione-tag">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        L'idea diventa azione
+      </div>
+      <h4>Va' a caccia di simboli</h4>
+      <p>Prendi tre oggetti che hai a portata di mano: un libro di testo, l'iPad, una confezione
+      qualsiasi. Cerca il simbolo &copy;, la scritta &laquo;tutti i diritti riservati&raquo;,
+      un nome di editore. Annota <b>dove</b> l'hai trovato e <b>di chi</b> parla.</p>
+      <textarea class="impegno" data-key="simboli" placeholder="Dove ho trovato il © e a chi apparteneva l'opera..."></textarea>
+      <div class="saved" data-for="simboli"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 · CREATIVE COMMONS ============ -->
+<section class="sec" id="s-commons">
+  <div class="sec-head narrow">
+    <div class="sec-num">Sezione 4 &middot; Il costruttore</div>
+    <h2>Creative Commons: dire s&igrave;, ma con delle condizioni</h2>
+    <p>Fra &laquo;tutti i diritti riservati&raquo; e &laquo;fate quello che volete&raquo; c'&egrave;
+    tutto uno spazio in mezzo. Le licenze Creative Commons servono a occuparlo.</p>
+  </div>
+
+  <div data-video="commons"></div>
+
+  <div class="narrow">
+    <div class="card">
+      <p>Nel <b>2001</b>, negli Stati Uniti, un gruppo di giuristi guidato da Lawrence Lessig
+      si accorge di un problema pratico: moltissimi autori sarebbero <b>felici</b> di far circolare
+      le proprie opere, ma l'unico strumento a disposizione &egrave; il &laquo;tutti i diritti
+      riservati&raquo;. Chi vuole condividere deve o rinunciare a tutto, o rispondere a mille
+      richieste una per una.</p>
+      <p>La soluzione sono licenze scritte una volta sola, valide per chiunque, comprensibili
+      a colpo d'occhio. <b>L'autore non rinuncia ai suoi diritti: sceglie in anticipo come
+      condividerli.</b></p>
+      <div class="fact">
+        <p><strong>Una regola vale sempre, in tutte le licenze:</strong> l'autore va citato.
+        La sigla <b>BY</b> non si toglie mai. Prendere un'opera Creative Commons e far finta
+        che sia tua &egrave; una violazione, anche se la licenza era gratuita.</p>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--head); font-size:22px; color:var(--bluD); margin:30px 0 16px; text-align:center">
+      Costruisci la tua licenza</h3>
+    <p style="text-align:center; color:var(--muted); max-width:600px; margin:0 auto 24px">
+      Attiva le condizioni e guarda come cambia quello che gli altri possono fare.
+      <b>SA</b> e <b>ND</b> non possono stare insieme: si contraddicono.</p>
+  </div>
+
+  <div class="ccbox">
+    <div class="cc-togs" id="cc-togs"></div>
+    <div class="cc-out">
+      <div class="cc-code" id="cc-code">CC BY</div>
+      <div class="cc-name" id="cc-name">Attribuzione</div>
+      <div class="cc-desc" id="cc-desc"></div>
+      <ul class="cc-list" id="cc-list"></ul>
+    </div>
+  </div>
+
+  <div class="narrow" style="margin-top:26px">
+    <div class="card">
+      <h3>E se volessi rinunciare davvero a tutto?</h3>
+      <p>Esiste anche <b>CC0</b>: l'autore rinuncia a ogni diritto patrimoniale e mette
+      volontariamente l'opera in pubblico dominio, subito, senza aspettare i 70 anni.
+      Chiunque pu&ograve; farne qualunque cosa, anche senza citarlo.</p>
+      <p>Non &egrave; la licenza pi&ugrave; usata, ma &egrave; utile per capire la scala: da
+      &laquo;tutti i diritti riservati&raquo; a CC0 c'&egrave; un'intera gradazione, e le sei
+      licenze Creative Commons sono i gradini in mezzo.</p>
+    </div>
+
+    <div class="azione">
+      <div class="azione-tag">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        L'idea diventa azione
+      </div>
+      <h4>Scegli la licenza per una cosa tua &mdash; e giustificala</h4>
+      <p>Pensa a un'opera che hai fatto o che vorresti fare. Usa il costruttore qui sopra,
+      fermati su una licenza e scrivi:</p>
+      <ul>
+        <li>quale sigla hai scelto;</li>
+        <li>quale condizione ti stava pi&ugrave; a cuore e <b>perch&eacute;</b>
+        (&laquo;mi piace cos&igrave;&raquo; non &egrave; una ragione: serve un motivo);</li>
+        <li>che cosa ti dar&agrave; fastidio se qualcuno lo far&agrave;, pur essendo permesso.</li>
+      </ul>
+      <textarea class="impegno" data-key="lamialicenza" placeholder="La mia opera, la mia licenza, le mie ragioni..."></textarea>
+      <div class="saved" data-for="lamialicenza"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4 · CASI ============ -->
+<section class="sec" id="s-casi">
+  <div class="sec-head narrow">
+    <div class="sec-num">Sezione 5 &middot; Il banco di prova</div>
+    <h2>Musica, libri, poesie: si pu&ograve; o non si pu&ograve;?</h2>
+    <p>Dieci situazioni vere. Decidi prima di leggere la spiegazione &mdash; sbagliare qui
+    &egrave; il modo migliore per non sbagliare fuori.</p>
+  </div>
+
+  <div class="narrow" id="casi-host"></div>
+  <div class="narrow"><div class="tally" id="casi-tally"></div></div>
+
+  <div class="narrow">
+    <div class="azione">
+      <div class="azione-tag">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        L'idea diventa azione
+      </div>
+      <h4>Il caso che ti ha spiazzato</h4>
+      <p>Fra i dieci, uno ti avr&agrave; sorpreso pi&ugrave; degli altri. Scrivi quale e
+      <b>che cosa credevi prima</b>. Riconoscere l'idea vecchia &egrave; quello che impedisce
+      di tornarci.</p>
+      <textarea class="impegno" data-key="spiazzato" placeholder="Il caso che mi ha sorpreso e che cosa pensavo prima..."></textarea>
+      <div class="saved" data-for="spiazzato"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5 · PLAGIO ============ -->
+<section class="sec" id="s-plagio">
+  <div class="sec-head narrow">
+    <div class="sec-num">Sezione 6 &middot; La linea sottile</div>
+    <h2>Citare non &egrave; copiare</h2>
+    <p>La differenza sta in tre gesti piccolissimi. Farli o non farli cambia tutto.</p>
+  </div>
+
+  <div class="narrow">
+    <div class="card">
+      <h3>Che cos'&egrave; il plagio</h3>
+      <p>Plagio significa <b>presentare come proprio il lavoro di un altro</b>. Non &egrave;
+      soltanto una questione di legge: &egrave; una questione di onest&agrave;. Si pu&ograve;
+      plagiare anche un'opera in pubblico dominio &mdash; nessuno ti denuncia per aver copiato
+      Leopardi, ma spacciare i suoi versi per tuoi resta una bugia.</p>
+      <p>Attenzione: <b>plagio non vuol dire copiare parola per parola</b>. Riscrivere il testo
+      di qualcun altro cambiando i sinonimi, e non dire da dove viene, &egrave; ugualmente plagio.
+      Quello che si prende in prestito non sono solo le parole: sono le idee, la struttura,
+      il ragionamento.</p>
+    </div>
+
+    <div class="card">
+      <h3>La citazione, invece, la legge la permette</h3>
+      <p>In Italia l'<b>articolo 70</b> della legge sul diritto d'autore consente di riportare
+      brani di un'opera altrui per <b>critica, discussione o insegnamento</b>. Non serve chiedere
+      il permesso. Ma servono tre condizioni.</p>
+      <div class="grid3" style="margin-top:18px">
+        <div style="background:var(--warm); border-radius:14px; padding:18px 20px">
+          <div style="font-family:var(--head); font-size:32px; font-weight:700; color:var(--gold); line-height:1">1</div>
+          <h4 style="font-family:var(--head); font-size:16.5px; color:var(--bluD); margin:6px 0 6px">Breve</h4>
+          <p style="font-size:15.5px; color:var(--muted)">Un brano, non l'opera intera.
+          Quattro versi s&igrave;, la poesia completa no.</p>
+        </div>
+        <div style="background:var(--warm); border-radius:14px; padding:18px 20px">
+          <div style="font-family:var(--head); font-size:32px; font-weight:700; color:var(--gold); line-height:1">2</div>
+          <h4 style="font-family:var(--head); font-size:16.5px; color:var(--bluD); margin:6px 0 6px">Riconoscibile</h4>
+          <p style="font-size:15.5px; color:var(--muted)">Virgolette o corsivo: si deve
+          <b>vedere</b> dove finisce la tua voce e comincia quella altrui.</p>
+        </div>
+        <div style="background:var(--warm); border-radius:14px; padding:18px 20px">
+          <div style="font-family:var(--head); font-size:32px; font-weight:700; color:var(--gold); line-height:1">3</div>
+          <h4 style="font-family:var(--head); font-size:16.5px; color:var(--bluD); margin:6px 0 6px">Attribuito</h4>
+          <p style="font-size:15.5px; color:var(--muted)">Autore, titolo, e dove l'hai preso.
+          Senza fonte non &egrave; citazione.</p>
+        </div>
+      </div>
+      <div class="fact">
+        <p><strong>Il limite delle fotocopie.</strong> La stessa legge consente di fotocopiare
+        al massimo il <b>15%</b> di un libro per uso personale. Fotocopiare un manuale intero
+        &laquo;perch&eacute; costa troppo&raquo; resta fuori dalla regola, anche a scuola.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Perch&eacute; conviene citare, al di l&agrave; delle regole</h3>
+      <p>Una ricerca senza fonti non &egrave; solo scorretta: &egrave; <b>pi&ugrave; debole</b>.
+      Chi legge non ha modo di verificare, quindi non ha motivo di crederti. Le fonti non
+      sono una tassa da pagare alla fine del lavoro: sono la parte che rende solido tutto
+      il resto.</p>
+      <p>E c'&egrave; un vantaggio pratico immediato: quando citi, il merito di quello che hai
+      scritto <b>tu</b> diventa finalmente visibile. Senza citazioni non si distingue il tuo
+      contributo da quello preso altrove.</p>
+    </div>
+
+    <div class="azione">
+      <div class="azione-tag">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        L'idea diventa azione
+      </div>
+      <h4>Trasforma una copiatura in una citazione</h4>
+      <p>Prendi una ricerca che hai gi&agrave; consegnato quest'anno. Trova un punto in cui hai
+      usato parole non tue senza dirlo &mdash; capita a tutti, non &egrave; una colpa da confessare.
+      Riscrivilo applicando i tre gesti: <b>accorcia</b>, <b>metti le virgolette</b>,
+      <b>aggiungi la fonte</b>. Incolla qui la versione nuova.</p>
+      <textarea class="impegno" data-key="citazione" placeholder="Il passaggio riscritto, con virgolette e fonte..."></textarea>
+      <div class="saved" data-for="citazione"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6b · FRONTIERE ============ -->
+<section class="sec" id="s-frontiere">
+  <div class="sec-head narrow">
+    <div class="sec-num">Sezione 7 &middot; Le frontiere</div>
+    <h2>Brevetti, intelligenza artificiale, NFT</h2>
+    <p>Tre casi in cui le regole che hai imparato si piegano, si fermano o non bastano
+    pi&ugrave;. Qui non ci sono solo risposte: ci sono domande ancora aperte.</p>
+  </div>
+
+  <div class="narrow">
+    <div class="card">
+      <h3>1. Il brevetto: l'unico caso in cui si protegge l'idea</h3>
+      <p>Ricordi il principio della sezione 2? <b>Le idee sono libere: protetta &egrave; la
+      forma che le dai.</b> Il brevetto &egrave; l'eccezione: protegge proprio la
+      <b>soluzione tecnica</b>, cio&egrave; l'idea di come si risolve un problema.
+      Non il disegno della macchina: il modo in cui funziona.</p>
+      <p>Ma quell'eccezione si paga cara, ed &egrave; l'opposto esatto del diritto d'autore.</p>
+    </div>
+  </div>
+
+  <div data-video="brevetti"></div>
+
+  <div class="narrow">
+    <div class="card">
+      <h3>Due sistemi speculari</h3>
+      <div class="grid2" style="margin-top:16px">
+        <div style="background:var(--bluL); border-radius:14px; padding:20px 22px">
+          <h4 style="font-family:var(--head); font-size:17px; color:var(--blu); margin-bottom:10px">Diritto d'autore</h4>
+          <ul style="margin:0; padding-left:20px; font-size:16px; color:var(--muted)">
+            <li>nasce da solo, gratis</li>
+            <li>nessun deposito, nessun esame</li>
+            <li>protegge la <b>forma</b></li>
+            <li>dura 70 anni dopo la morte</li>
+          </ul>
+        </div>
+        <div style="background:var(--goldL); border-radius:14px; padding:20px 22px">
+          <h4 style="font-family:var(--head); font-size:17px; color:var(--gold); margin-bottom:10px">Brevetto</h4>
+          <ul style="margin:0; padding-left:20px; font-size:16px; color:var(--muted)">
+            <li>va <b>depositato</b> e costa</li>
+            <li>viene esaminato: deve essere nuovo</li>
+            <li>protegge l'<b>invenzione</b></li>
+            <li>dura circa 20 anni dalla domanda</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fact">
+        <p><strong>Il patto nascosto dietro il brevetto.</strong> Per ottenerlo devi
+        <b>pubblicare</b> come funziona la tua invenzione: chiunque pu&ograve; leggerla.
+        In cambio, per vent'anni sei l'unico a poterla sfruttare. Passati quelli, diventa
+        di tutti. Non &egrave; un segreto protetto: &egrave; il contrario di un segreto.</p>
+      </div>
+      <p>Esiste anche il <b>marchio</b>: il segno che distingue i prodotti di un'azienda
+      (un nome, un logo). Si rinnova ogni dieci anni e, se lo rinnovi sempre, non scade mai.
+      &Egrave; il motivo per cui certi loghi sono in giro da un secolo.</p>
+    </div>
+
+    <div class="card">
+      <h3>2. Intelligenza artificiale: la domanda senza risposta definitiva</h3>
+      <p>Un'immagine generata da un'IA a partire da una frase: di chi &egrave;?
+      Di chi ha scritto la frase? Dell'azienda che ha fatto il programma? Di nessuno?</p>
+      <p>Il principio che regge tutto il diritto d'autore &egrave; che l'opera nasca da una
+      <b>persona</b>: senza un apporto creativo umano manca il presupposto della protezione.
+      Da qui l'orientamento prevalente in Europa: pi&ugrave; il risultato dipende
+      dall'automatismo, meno c'&egrave; da proteggere; pi&ugrave; c'&egrave; scelta,
+      lavoro e rielaborazione umana, pi&ugrave; ci si avvicina a un'opera vera.</p>
+      <p>E c'&egrave; la domanda opposta, forse pi&ugrave; grossa: quei programmi hanno
+      imparato osservando <b>milioni di opere protette</b>, quasi sempre senza chiedere
+      niente ai loro autori. &Egrave; una citazione su scala industriale o &egrave;
+      qualcos'altro? I tribunali di mezzo mondo ci stanno lavorando adesso.</p>
+      <div class="fact">
+        <p><strong>Attenzione a come ascolti il prossimo video.</strong> &Egrave; la
+        spiegazione di un avvocato su una materia <b>in movimento</b>: quello che dice vale
+        oggi e potrebbe cambiare. Non &egrave; una regola stabile come i 70 anni. Ascoltalo
+        per capire <em>quali sono i problemi</em>, non per memorizzare una soluzione.</p>
+      </div>
+    </div>
+  </div>
+
+  <div data-video="ia"></div>
+
+  <div class="narrow">
+    <div class="card">
+      <h3>3. NFT: comprare non vuol dire possedere i diritti</h3>
+      <p>Un NFT &egrave; un certificato registrato su una blockchain che <b>punta</b> a un
+      file. Dice: &laquo;questo gettone appartiene a questa persona&raquo;. Per qualche anno
+      se ne sono venduti a cifre enormi.</p>
+      <p>Ecco il punto che quasi nessuno chiariva: <b>comprare un NFT non significa
+      comprare il diritto d'autore sull'opera</b>. Salvo che il contratto lo dica in modo
+      esplicito, chi compra acquista il gettone, non i diritti. Non pu&ograve; stamparla su
+      magliette, non pu&ograve; venderne copie, non pu&ograve; impedire agli altri di
+      guardarla.</p>
+      <div class="quote">
+        &Egrave; la stessa cosa di sempre: possedere una copia non &egrave; avere i diritti.
+        <span class="src">Hai comprato un libro? &Egrave; tuo: puoi leggerlo, regalarlo,
+        rivenderlo. Non puoi ristamparlo. L'NFT non cambia questa regola, la ripete
+        con una tecnologia nuova.</span>
+      </div>
+    </div>
+  </div>
+
+  <div data-video="nft"></div>
+
+  <div class="narrow">
+    <div class="azione">
+      <div class="azione-tag">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        L'idea diventa azione
+      </div>
+      <h4>Prendi posizione su una domanda aperta</h4>
+      <p>Scegli <b>una</b> delle tre e scrivi la tua posizione in cinque righe. Non serve
+      avere ragione: serve avere un argomento. &laquo;Mi sembra giusto&raquo; non &egrave;
+      un argomento &mdash; &laquo;&egrave; giusto perch&eacute;&hellip;&raquo; s&igrave;.</p>
+      <ul>
+        <li>Un'immagine fatta dall'IA in tre secondi dovrebbe valere quanto un disegno
+        fatto a mano in tre settimane?</li>
+        <li>&Egrave; corretto che un programma impari dalle opere di migliaia di artisti
+        senza chiederglielo e senza pagarli?</li>
+        <li>Se compri un NFT e non hai i diritti sull'opera, che cosa hai comprato davvero?</li>
+      </ul>
+      <textarea class="impegno" data-key="frontiere" placeholder="La domanda che ho scelto e la mia posizione, con la ragione..."></textarea>
+      <div class="saved" data-for="frontiere"></div>
+      <p style="margin-top:14px; font-size:16px; color:var(--muted)">In classe: confrontate
+      le posizioni <b>prima</b> di cercare chi ha ragione. Su queste tre domande non esiste
+      ancora una risposta ufficiale, e discuterle &egrave; esattamente il punto.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7 · PAROLE ============ -->
+<section class="sec" id="s-parole">
+  <div class="sec-head narrow">
+    <div class="sec-num">Sezione 8 &middot; Il lessico</div>
+    <h2>Le parole da avere in tasca</h2>
+    <p>Tocca una carta per girarla. Sono i termini che ricorrono ovunque: conoscerli
+    significa capire i contratti, le note dei siti, i messaggi delle piattaforme.</p>
+  </div>
+
+  <div id="fc-host"></div>
+
+  <div class="narrow">
+    <div class="azione">
+      <div class="azione-tag">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        L'idea diventa azione
+      </div>
+      <h4>Spiega tre parole a chi non le sa</h4>
+      <p>Scegli le tre carte che ti sembravano pi&ugrave; oscure. Riscrivi la definizione
+      <b>con parole tue</b>, come la diresti a un compagno di prima media. Se non riesci a
+      spiegarla senza rileggere la carta, non l'hai ancora capita.</p>
+      <textarea class="impegno" data-key="treparole" placeholder="Le mie tre definizioni..."></textarea>
+      <div class="saved" data-for="treparole"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7 · VERIFICA ============ -->
+<section class="sec" id="s-verifica">
+  <div class="sec-head narrow">
+    <div class="sec-num">Sezione 9 &middot; La verifica</div>
+    <h2>Mettiti alla prova</h2>
+    <p><span id="q-tot">&mdash;</span> domande. Non conta il punteggio: conta leggere la
+    spiegazione, soprattutto quando la risposta non era quella che pensavi.</p>
+  </div>
+  <div id="quiz-host"></div>
+</section>
+
+<!-- ============ 8 · META ============ -->
+<section class="sec" id="s-meta">
+  <div class="sec-head narrow">
+    <div class="sec-num">Sezione 10 &middot; La chiusura</div>
+    <h2>Torniamo al video muto</h2>
+    <p>All'inizio avevamo lasciato una domanda in sospeso. Adesso hai tutti i pezzi
+    per rispondere da solo.</p>
+  </div>
+
+  <div class="narrow">
+    <div class="card">
+      <h3>La risposta</h3>
+      <p>Le riprese erano loro, il montaggio era loro: su <b>quella</b> parte la classe aveva
+      tutti i diritti. Ma la canzone era un'opera di qualcun altro, e usarla in un video
+      pubblicato significa <b>diffonderla in pubblico</b> &mdash; uno dei diritti patrimoniali
+      che appartiene al suo autore e alla sua etichetta. Non conta che non ci guadagnassero:
+      il diritto riguarda l'uso, non il profitto.</p>
+      <p>Ed &egrave; per questo che il video sul telefono non avrebbe creato nessun problema:
+      finch&eacute; resta privato non c'&egrave; diffusione al pubblico. La linea si &egrave;
+      superata nel momento del caricamento.</p>
+      <div class="fact">
+        <p><strong>Che cosa avrebbero dovuto fare.</strong> Tre strade, tutte praticabili:
+        usare un brano in <b>pubblico dominio</b>; usare un brano con licenza <b>Creative Commons</b>
+        compatibile, citando l'autore nei titoli di coda; oppure comporre il sottofondo
+        <b>da soli</b> &mdash; e a quel punto la licenza la sceglievano loro.</p>
+      </div>
+      <p>La cosa da portarsi via non &egrave; &laquo;non si pu&ograve; usare la musica&raquo;.
+      &Egrave; l'opposto: <b>si pu&ograve; quasi sempre fare quello che si vuole, a patto di
+      sapere che cosa si sta usando e di chiederlo alla persona giusta &mdash; o di scegliere,
+      fin dall'inizio, materiale che quel permesso lo ha gi&agrave; dato.</b></p>
+    </div>
+
+    <div class="meta-q">
+      <label for="m1">Che cosa ho capito che prima non sapevo?</label>
+      <textarea class="impegno" id="m1" data-key="meta1" placeholder="Prima di questo percorso pensavo che..."></textarea>
+      <div class="saved" data-for="meta1"></div>
+    </div>
+    <div class="meta-q">
+      <label for="m2">Come ci sono arrivato? Quale momento del percorso ha fatto scattare qualcosa?</label>
+      <textarea class="impegno" id="m2" data-key="meta2" placeholder="Il punto in cui ho capito è stato..."></textarea>
+      <div class="saved" data-for="meta2"></div>
+    </div>
+    <div class="meta-q">
+      <label for="m3">Che cosa cambier&ograve; la prossima volta che pubblico o consegno qualcosa?</label>
+      <textarea class="impegno" id="m3" data-key="meta3" placeholder="Da adesso, quando pubblico qualcosa, io..."></textarea>
+      <div class="saved" data-for="meta3"></div>
+    </div>
+
+    <div class="azione">
+      <div class="azione-tag">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        L'idea diventa azione &middot; consegna finale
+      </div>
+      <h4>La licenza della classe</h4>
+      <p>In gruppo, decidete la licenza per un'opera collettiva vera: il giornalino, il video
+      di fine anno, le foto della gita, il logo della classe. Non &egrave; un esercizio finto:
+      quella licenza andr&agrave; scritta davvero sull'opera.</p>
+      <ul>
+        <li>Discutete <b>una condizione alla volta</b> (NC? SA? ND?) e votate.</li>
+        <li>Per ogni scelta, scrivete <b>la ragione</b> in una riga.</li>
+        <li>Scrivete la formula finale: <em>&laquo;Opera di [classe], [anno], licenza CC ___&raquo;</em>.</li>
+      </ul>
+      <textarea class="impegno" data-key="licenzaclasse" placeholder="La licenza che abbiamo scelto e perché..."></textarea>
+      <div class="saved" data-for="licenzaclasse"></div>
+    </div>
+
+    <p style="text-align:center; color:var(--muted); margin-top:26px; font-size:16px">
+      Quello che scrivi resta solo su questo dispositivo, nel browser. Non viene inviato da nessuna parte.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Scuola Sacra Famiglia di Orzinuovi (BS) &middot; Animatore Digitale Andrea Cerioli
+  </div>
+</footer>
+
+<button class="doc-open" id="doc-open">Info docenti</button>
+
+<div class="modal" id="modal">
+  <div class="modal-in">
+    <h3>Di chi &egrave; quest'opera?</h3>
+    <p style="color:var(--muted); font-size:16px">Nota metodologica per i colleghi</p>
+    <div class="mtabs">
+      <button class="mtab active" data-p="p1">Metodologia</button>
+      <button class="mtab" data-p="p2">Struttura e tecniche</button>
+      <button class="mtab" data-p="p3">Uso in classe</button>
+    </div>
+
+    <div class="mpane on" id="p1">
+      <h4>Obiettivo didattico</h4>
+      <p>Portare lo studente a distinguere diritti morali e patrimoniali, a riconoscere il
+      pubblico dominio, a leggere una licenza Creative Commons e a distinguere plagio da
+      citazione &mdash; arrivando a <b>scegliere e motivare</b> una licenza per un'opera propria.</p>
+      <h4>Cornice pedagogica</h4>
+      <ul>
+        <li><b>Piaget &mdash; conflitto cognitivo:</b> l'apertura (video rimosso a un lavoro
+        interamente originale) rompe lo schema &laquo;se non ci guadagno posso usarlo&raquo;.</li>
+        <li><b>Zeigarnik:</b> la domanda del caso iniziale resta esplicitamente aperta e viene
+        chiusa solo nella sezione finale. Il percorso &egrave; costruito come un anello.</li>
+        <li><b>Bruner &mdash; apprendimento per scoperta:</b> il costruttore di licenza non
+        spiega le sei licenze CC, le fa <b>generare</b> allo studente combinando le clausole.</li>
+        <li><b>Dewey &mdash; learning by doing:</b> il banco di prova dei dieci casi precede
+        la regola; ogni sezione chiude con una consegna operativa su materiale reale dello studente.</li>
+        <li><b>Vygotskij &mdash; scaffolding:</b> ogni consegna fornisce domande-guida
+        e vincoli di qualit&agrave; (&laquo;mi piace&raquo; non &egrave; una motivazione ammessa).</li>
+        <li><b>Metacognizione:</b> chiusura sulle tre domande canoniche + artefatto collettivo
+        (la licenza della classe).</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Cittadinanza digitale</span>
+        <span class="tag">Educazione civica</span>
+        <span class="tag">Pensiero critico</span>
+        <span class="tag">Media literacy</span>
+        <span class="tag">Metacognizione</span>
+      </div>
+    </div>
+
+    <div class="mpane" id="p2">
+      <h4>Struttura</h4>
+      <ul>
+        <li><b>1. Il caso</b> &mdash; video stimolo + conflitto cognitivo, loop aperto.</li>
+        <li><b>2. Il principio</b> &mdash; nascita automatica del diritto, morali vs patrimoniali,
+        70 anni, pubblico dominio e la trappola delle esecuzioni.</li>
+        <li><b>3. Le parole</b> &mdash; copyright vs diritto d'autore, Berna 1886, L. 633/1941.</li>
+        <li><b>4. Il costruttore</b> &mdash; componente interattivo BY/NC/SA/ND con
+        vincolo di mutua esclusione SA&ne;ND; CC0.</li>
+        <li><b>5. Il banco di prova</b> &mdash; 10 casi reali con feedback esplicativo.</li>
+        <li><b>6. La linea sottile</b> &mdash; plagio, art. 70, le tre condizioni, limite 15%.</li>
+        <li><b>7. Le frontiere</b> &mdash; brevetti (l'eccezione che protegge l'idea),
+        opere e IA, NFT. Chiude su tre domande deliberatamente <b>senza risposta</b>.</li>
+        <li><b>8. Il lessico</b> &mdash; flashcard girevoli.</li>
+        <li><b>9. La verifica</b> &mdash; quiz con spiegazione dell'errore.</li>
+        <li><b>10. La chiusura</b> &mdash; risposta al caso iniziale + metacognizione + consegna collettiva.</li>
+      </ul>
+      <h4>I sei video</h4>
+      <ul>
+        <li><b>Sez. 1</b> &mdash; <i>Copyright, come proteggere la tua opera!</i> (ufficiobrevetti.it)</li>
+        <li><b>Sez. 2</b> &mdash; <i>Diritto d'autore e Copyright</i>, lezione del prof. Antonio Guida</li>
+        <li><b>Sez. 4</b> &mdash; <i>Immagini, copyright e creative commons</i> (WebCattolici)</li>
+        <li><b>Sez. 7</b> &mdash; <i>Come funzionano i brevetti</i> (Geopop) &middot;
+        <i>Intelligenza Artificiale e diritti d'autore</i> (Avv. Angelo Greco) &middot;
+        <i>Cos'&egrave; un NFT?</i> (Ferry)</li>
+      </ul>
+      <p style="color:var(--muted); font-size:16px">I video sono materiale di terzi, embeddati
+      dai rispettivi canali. Il video sull'IA riguarda una materia in evoluzione: il testo
+      dell'app lo segnala esplicitamente allo studente, invitandolo a ricavarne le domande
+      e non una regola stabile.</p>
+      <h4>Note tecniche</h4>
+      <ul>
+        <li>Single-file vanilla, nessun framework. Solo Google Fonts + YouTube IFrame API.</li>
+        <li>Player video custom senza distrazioni: iframe con <code>pointer-events:none</code>
+        e overlay di click, <code>controls=0 fs=0 rel=0 modestbranding=1 iv_load_policy=3
+        disablekb=1</code>. Pausa automatica di <b>tutti</b> i player al cambio sezione.</li>
+        <li>I sei player nascono da una <b>factory</b> su <code>[data-video]</code>, con classi
+        e non <code>id</code>: per aggiungerne uno basta una voce in <code>VIDEO</code> e un
+        <code>&lt;div data-video="chiave"&gt;</code> nella pagina.</li>
+        <li>Le risposte aperte sono salvate in <code>localStorage</code>, solo sul dispositivo.
+        Nessuna telemetria, nessun invio.</li>
+        <li>Zero emoji: tutte le icone sono SVG inline. Nessun rosso come feedback d'errore
+        (ambra al suo posto).</li>
+      </ul>
+    </div>
+
+    <div class="mpane" id="p3">
+      <h4>Tempi</h4>
+      <p>Con i sei video il percorso non sta in due ore: meglio <b>tre moduli</b> &mdash;
+      sezioni 1&ndash;4, poi 5&ndash;7, poi 8&ndash;10. In alternativa, assegnare i video
+      della sezione 7 come visione a casa e usare l'ora in classe solo per la discussione.
+      Il costruttore di licenza funziona bene anche alla LIM, in plenaria, con la classe che vota
+      ogni clausola prima di attivarla.</p>
+      <h4>Prima dell'attivit&agrave;</h4>
+      <ul>
+        <li>Se disponibile, impostare il video stimolo: apre l'esperienza ed &egrave; il
+        conflitto cognitivo su cui poggia tutto il percorso.</li>
+        <li>Chiedere agli studenti di portare <b>un'opera propria</b> (disegno, foto, testo,
+        video): serve nelle consegne delle sezioni 2 e 4.</li>
+      </ul>
+      <h4>Attenzioni</h4>
+      <ul>
+        <li>La sezione 6 tocca il plagio: il testo &egrave; scritto per evitare il registro
+        colpevolizzante. La consegna dice esplicitamente &laquo;capita a tutti&raquo;.
+        Mantenere quel tono anche nella discussione: si guarda al testo, mai alla persona.</li>
+        <li>Studenti under 14: nessuna attivit&agrave; richiede l'uso diretto di IA generativa.
+        La sezione 7 tratta le opere generate dall'IA per <b>osservazione e discussione</b>,
+        mai come esercitazione: nessuna consegna chiede di generare qualcosa.</li>
+        <li>Le tre domande finali della sezione 7 sono <b>volutamente aperte</b>. Farle
+        discutere prima di cercare &laquo;chi ha ragione&raquo;: su quei punti una risposta
+        ufficiale non c'&egrave; ancora, ed &egrave; questo che le rende utili.</li>
+        <li>Il quiz non produce voto. Il materiale valutabile sono le consegne aperte
+        &laquo;L'idea diventa azione&raquo; e l'artefatto finale di classe.</li>
+      </ul>
+      <h4>Possibile rubrica sintetica</h4>
+      <ul>
+        <li><b>Comprensione:</b> distingue morali/patrimoniali e riconosce il pubblico dominio.</li>
+        <li><b>Applicazione:</b> sceglie una licenza coerente con l'intenzione dichiarata.</li>
+        <li><b>Argomentazione:</b> motiva la scelta con una ragione, non con una preferenza.</li>
+        <li><b>Correttezza:</b> nella consegna riscritta applica accorciamento, virgolette e fonte.</li>
+      </ul>
+    </div>
+
+    <button class="btn ghost" id="doc-close" style="margin-top:22px">Chiudi</button>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   Di chi è quest'opera? — logica
+   ============================================================ */
+
+/* ---- Video del percorso. Titoli e canali sono quelli reali su YouTube.
+        Per aggiungerne uno: nuovo oggetto qui + <div data-video="chiave"> nella pagina. ---- */
+var VIDEO = {
+  apri:     {id:'io8cAQ1DhsQ', titolo:'Copyright, come proteggere la tua opera!',
+             canale:'ufficiobrevetti.it',
+             nota:'Guarda prima di leggere: il resto della sezione parte da qui.'},
+  principio:{id:'Oe5rqxMENik', titolo:'Diritto d’autore e Copyright — lezione del prof. Antonio Guida',
+             canale:'Antonio Guida',
+             nota:'Una lezione completa sui due diritti. Riprendila se un passaggio del testo non ti torna.'},
+  commons:  {id:'JfCdWd-MTpc', titolo:'Immagini, copyright e creative commons',
+             canale:'WebCattolici',
+             nota:'Il caso delle immagini è il più frequente a scuola: da dove si prendono e a quali condizioni.'},
+  brevetti: {id:'PIXZYTo_VcM', titolo:'Come funzionano i brevetti per proteggere le invenzioni',
+             canale:'Geopop',
+             nota:'Come si deposita un brevetto, quanto costa e quanto dura.'},
+  ia:       {id:'xN0X8evhaFc', titolo:'Intelligenza Artificiale e diritti d’autore: come funziona il copyright',
+             canale:'Avv. Angelo Greco',
+             nota:'Il punto di vista di un avvocato su una materia ancora in movimento.'},
+  nft:      {id:'DBc9z2l13Y0', titolo:'Cos’è un NFT? | Non-Fungible Token',
+             canale:'Ferry',
+             nota:'Che cosa si compra davvero quando si compra un NFT.'}
+};
+
+/* ---------- Navigazione ---------- */
+var SECTIONS = [
+  {id:'s-apri',     label:'Il caso'},
+  {id:'s-cosa',     label:'Che cos’è'},
+  {id:'s-duevie',   label:'Copyright o diritto d’autore'},
+  {id:'s-commons',  label:'Creative Commons'},
+  {id:'s-casi',     label:'Si può o non si può'},
+  {id:'s-plagio',   label:'Plagio e citazione'},
+  {id:'s-frontiere',label:'Le frontiere'},
+  {id:'s-parole',   label:'Le parole'},
+  {id:'s-verifica', label:'Verifica'},
+  {id:'s-meta',     label:'Chiusura'}
+];
+
+var players = [];
+
+function buildNav(){
+  var host = document.getElementById('pills');
+  SECTIONS.forEach(function(s, i){
+    var b = document.createElement('button');
+    b.className = 'pill' + (i === 0 ? ' active' : '');
+    b.textContent = s.label;
+    b.setAttribute('data-target', s.id);
+    b.addEventListener('click', function(){ go(s.id); });
+    host.appendChild(b);
+  });
+}
+
+function go(id){
+  players.forEach(function(p){
+    try{ if(p && p.pauseVideo) p.pauseVideo(); }catch(e){}
+  });
+  document.querySelectorAll('section.sec').forEach(function(s){
+    s.classList.toggle('on', s.id === id);
+  });
+  document.querySelectorAll('.pill').forEach(function(p){
+    p.classList.toggle('active', p.getAttribute('data-target') === id);
+  });
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+/* ---------- Icone SVG riusabili ---------- */
+function svgCheck(color){
+  return '<svg class="mark" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="' + color +
+    '" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">' +
+    '<circle cx="12" cy="12" r="9.5" stroke-width="1.7"/><path d="M8 12.4l2.6 2.6L16 9.6"/></svg>';
+}
+function svgMinus(color){
+  return '<svg class="mark" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="' + color +
+    '" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">' +
+    '<circle cx="12" cy="12" r="9.5" stroke-width="1.7"/><path d="M8.4 12h7.2"/></svg>';
+}
+
+/* ============================================================
+   VIDEO — player custom senza distrazioni
+   ============================================================ */
+function fmt(s){
+  s = Math.max(0, Math.floor(s || 0));
+  var m = Math.floor(s / 60), r = s % 60;
+  return m + ':' + (r < 10 ? '0' : '') + r;
+}
+
+/* Ogni <div data-video="chiave"> diventa un player senza distrazioni.
+   Componente istanziato da factory: dentro si usano CLASSI, mai id
+   (id duplicati romperebbero il secondo player). */
+var VQUEUE = [];
+
+function buildVideo(){
+  var hosts = document.querySelectorAll('[data-video]');
+  if(!hosts.length) return;
+
+  hosts.forEach(function(host){
+    var cfg = VIDEO[host.getAttribute('data-video')];
+    if(!cfg) return;
+    var domId = 'ytp-' + VQUEUE.length;
+
+    var el = document.createElement('div');
+    el.className = 'vblock';
+    el.innerHTML =
+      '<div class="vwrap">' +
+        '<div class="vratio">' +
+          '<div id="' + domId + '"></div>' +
+          '<div class="vclick"></div>' +
+          '<div class="vcover">' +
+            '<img class="vthumb" alt="" src="https://i.ytimg.com/vi/' + cfg.id + '/sddefault.jpg">' +
+            '<div class="vcover-in">' +
+              '<svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="1.4">' +
+                '<circle cx="12" cy="12" r="10.5"/><path d="M10 8.4l6 3.6-6 3.6z" fill="#D4A017" stroke="none"/></svg>' +
+              '<h4>' + cfg.titolo + '</h4>' +
+              '<span class="vchan">' + cfg.canale + '</span>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="vctrl">' +
+          '<button class="vplay" type="button" aria-label="Play o pausa">' +
+            '<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5l11 6.5-11 6.5z"/></svg>' +
+          '</button>' +
+          '<div class="vbar"><div class="vfill"></div></div>' +
+          '<div class="vtime">0:00 / 0:00</div>' +
+          '<button class="vmute" type="button" aria-label="Muto">' +
+            '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+              '<path d="M11 5L6.5 9H3v6h3.5L11 19zM15.5 9.5a3.5 3.5 0 010 5M18.5 7a7 7 0 010 10"/></svg>' +
+          '</button>' +
+        '</div>' +
+      '</div>' +
+      (cfg.nota ? '<p class="vcap">' + cfg.nota + '</p>' : '');
+
+    host.appendChild(el);
+
+    /* miniatura: sddefault a volte non esiste, si ripiega su hqdefault */
+    var th = el.querySelector('.vthumb');
+    th.addEventListener('error', function(){
+      if(th.getAttribute('data-fb')) return;
+      th.setAttribute('data-fb', '1');
+      th.src = 'https://i.ytimg.com/vi/' + cfg.id + '/hqdefault.jpg';
+    });
+
+    VQUEUE.push({domId:domId, vid:cfg.id, root:el});
+  });
+
+  var tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  document.head.appendChild(tag);
+}
+
+window.onYouTubeIframeAPIReady = function(){
+  VQUEUE.forEach(function(q){
+    var p = new YT.Player(q.domId, {
+      videoId: q.vid,
+      playerVars:{
+        controls:0, fs:0, modestbranding:1, rel:0, iv_load_policy:3,
+        disablekb:1, playsinline:1, enablejsapi:1
+      },
+      events:{ onReady: function(){ wirePlayer(p, q.root); } }
+    });
+    players.push(p);
+  });
+
+  /* un solo intervallo per tutti i player, non N */
+  setInterval(function(){
+    players.forEach(function(p){
+      if(!p || !p.getDuration || !p.__ui) return;
+      var d = p.getDuration(), c = p.getCurrentTime();
+      if(d){
+        p.__ui.fill.style.width = (c / d * 100) + '%';
+        p.__ui.time.textContent = fmt(c) + ' / ' + fmt(d);
+      }
+    });
+  }, 400);
+};
+
+function wirePlayer(p, root){
+  var cover = root.querySelector('.vcover');
+  var click = root.querySelector('.vclick');
+  var play  = root.querySelector('.vplay');
+  var bar   = root.querySelector('.vbar');
+  var fill  = root.querySelector('.vfill');
+  var time  = root.querySelector('.vtime');
+  var mute  = root.querySelector('.vmute');
+  p.__ui = {fill:fill, time:time};
+
+  function toggle(){
+    if(p.getPlayerState() === 1){ p.pauseVideo(); }
+    else { p.playVideo(); cover.style.display = 'none'; }
+  }
+  cover.addEventListener('click', toggle);
+  click.addEventListener('click', toggle);
+  play.addEventListener('click', toggle);
+
+  bar.addEventListener('click', function(e){
+    var r = bar.getBoundingClientRect();
+    var d = p.getDuration();
+    if(d) p.seekTo(((e.clientX - r.left) / r.width) * d, true);
+  });
+
+  mute.addEventListener('click', function(){
+    if(p.isMuted()){ p.unMute(); mute.style.opacity = 1; }
+    else { p.mute(); mute.style.opacity = .5; }
+  });
+}
+
+/* ============================================================
+   COSTRUTTORE LICENZA CREATIVE COMMONS
+   ============================================================ */
+var CLAUSOLE = [
+  {k:'by', sigla:'BY', nome:'Attribuzione', fissa:true,
+   desc:'Devi citare l’autore. C’è in tutte le licenze: non si può togliere.'},
+  {k:'nc', sigla:'NC', nome:'Non commerciale', fissa:false,
+   desc:'Nessuno può guadagnarci sopra. Uso scolastico e personale sì, vendita no.'},
+  {k:'sa', sigla:'SA', nome:'Condividi allo stesso modo', fissa:false,
+   desc:'Se modifichi l’opera, la versione nuova deve avere la stessa licenza. La libertà si trasmette.'},
+  {k:'nd', sigla:'ND', nome:'Non opere derivate', fissa:false,
+   desc:'Puoi condividerla, ma solo intatta. Niente modifiche, niente remix.'}
+];
+
+var DESCRIZIONI = {
+  'CC BY':'La più aperta delle sei. Chiunque può usarla, modificarla e perfino venderla: l’unico obbligo è dire chi l’ha fatta.',
+  'CC BY-SA':'Aperta, ma “contagiosa”: chi la modifica deve lasciare la stessa libertà a chi verrà dopo. È la licenza di Wikipedia.',
+  'CC BY-NC':'Circola liberamente e si può modificare, ma nessuno ci può guadagnare. Molto usata dagli autori che vogliono farsi conoscere senza regalare il proprio lavoro alle aziende.',
+  'CC BY-NC-SA':'Niente guadagno e obbligo di mantenere la stessa licenza. È la scelta tipica dei materiali didattici condivisi fra insegnanti.',
+  'CC BY-ND':'Si può diffondere ovunque, anche vendendola, ma deve restare identica. La sceglie chi tiene molto all’integrità dell’opera — un saggio, un manifesto, un documento.',
+  'CC BY-NC-ND':'La più chiusa delle sei: puoi solo condividerla così com’è, senza guadagnarci e senza toccarla. Poco più di un “guarda ma non toccare”, con il permesso di passarla ad altri.'
+};
+
+var ccState = {nc:false, sa:false, nd:false};
+
+function buildCC(){
+  var host = document.getElementById('cc-togs');
+  CLAUSOLE.forEach(function(c){
+    var b = document.createElement('button');
+    b.className = 'cc-tog' + (c.fissa ? ' fixed' : '');
+    b.setAttribute('data-k', c.k);
+    b.setAttribute('type', 'button');
+    if(c.fissa) b.setAttribute('aria-disabled', 'true');
+    b.innerHTML =
+      '<span class="cc-ico">' + c.sigla + '</span>' +
+      '<span><b>' + c.nome + '</b><span class="d">' + c.desc + '</span></span>';
+    if(!c.fissa){
+      b.addEventListener('click', function(){
+        ccState[c.k] = !ccState[c.k];
+        /* SA e ND si escludono a vicenda */
+        if(c.k === 'sa' && ccState.sa) ccState.nd = false;
+        if(c.k === 'nd' && ccState.nd) ccState.sa = false;
+        renderCC();
+      });
+    }
+    host.appendChild(b);
+  });
+  renderCC();
+}
+
+function renderCC(){
+  document.querySelectorAll('.cc-tog').forEach(function(b){
+    var k = b.getAttribute('data-k');
+    if(k === 'by') return;
+    b.classList.toggle('on', ccState[k]);
+    var bloccata = (k === 'sa' && ccState.nd) || (k === 'nd' && ccState.sa);
+    b.classList.toggle('off', bloccata);
+  });
+
+  var code = 'CC BY' + (ccState.nc ? '-NC' : '') + (ccState.sa ? '-SA' : '') + (ccState.nd ? '-ND' : '');
+  var nomi = ['Attribuzione'];
+  if(ccState.nc) nomi.push('Non commerciale');
+  if(ccState.sa) nomi.push('Condividi allo stesso modo');
+  if(ccState.nd) nomi.push('Non opere derivate');
+
+  document.getElementById('cc-code').textContent = code;
+  document.getElementById('cc-name').textContent = nomi.join(' · ');
+  document.getElementById('cc-desc').textContent = DESCRIZIONI[code] || '';
+
+  var permessi = [
+    {t:'Condividere l’opera con chiunque',                 ok:true},
+    {t:'Citare l’autore',                                   ok:true, obbligo:true},
+    {t:'Usarla per guadagnarci',                                 ok:!ccState.nc},
+    {t:'Modificarla, tagliarla, remixarla',                      ok:!ccState.nd},
+    {t:'Pubblicare la versione modificata con la licenza che vuoi', ok:!ccState.nd && !ccState.sa}
+  ];
+
+  var ok = getComputedStyle(document.documentElement).getPropertyValue('--ok').trim() || '#1B6B3A';
+  var wa = getComputedStyle(document.documentElement).getPropertyValue('--warn').trim() || '#B8860B';
+
+  document.getElementById('cc-list').innerHTML = permessi.map(function(p){
+    var testo = p.obbligo ? p.t + ' <b>(sempre obbligatorio)</b>' : p.t;
+    return '<li class="' + (p.ok ? 'yes' : 'no') + '">' +
+      (p.ok ? svgCheck(ok) : svgMinus(wa)) + '<span>' + testo + '</span></li>';
+  }).join('');
+}
+
+/* ============================================================
+   BANCO DI PROVA — i casi
+   ============================================================ */
+var CASI = [
+  {q:'Citi quattro versi di una poesia di Ungaretti nella tua ricerca, scrivendo titolo e autore.',
+   ok:true,
+   fb:'Sì. È esattamente il diritto di citazione: brano breve, riconoscibile come altrui, con la fonte. Ungaretti è morto nel 1970, quindi l’opera è ancora protetta — ma la citazione a scopo di studio è permessa dalla legge.'},
+
+  {q:'Fotocopi un intero libro di testo per tutta la classe, perché costa troppo.',
+   ok:false,
+   fb:'No. La legge consente la copia privata fino al 15% del volume. Un libro intero è fuori limite, anche se la ragione è comprensibile: quel testo è il lavoro di autori, redattori e illustratori.'},
+
+  {q:'Usi una canzone protetta come sottofondo di un video che pubblichi su YouTube.',
+   ok:false,
+   fb:'No, non senza licenza. Pubblicare significa diffondere in pubblico: è un diritto patrimoniale del titolare. Non conta che il video sia gratuito e non conta che il resto sia tutto tuo.'},
+
+  {q:'Usi un brano con licenza CC BY come sottofondo dello stesso video, citando l’autore nei titoli di coda.',
+   ok:true,
+   fb:'Sì. L’autore ha già dato il permesso in anticipo: è il senso delle licenze Creative Commons. L’unica condizione, BY, l’hai rispettata citandolo.'},
+
+  {q:'Copi un paragrafo da Wikipedia, cambi qualche parola e lo consegni come tuo.',
+   ok:false,
+   fb:'No, per due motivi diversi. È plagio, perché presenti come tuo il lavoro di altri — e cambiare i sinonimi non lo evita. Inoltre Wikipedia è CC BY-SA: chiede comunque di essere attribuita.'},
+
+  {q:'Stampi un canto della Divina Commedia e lo reciti a scuola.',
+   ok:true,
+   fb:'Sì. Dante è in pubblico dominio da secoli: l’opera è di tutti. Resta il diritto morale, quindi il testo va comunque attribuito a Dante — cosa che nessuno si sognerebbe di non fare.'},
+
+  {q:'Scarichi un film da un sito pirata: tanto lo guardi solo tu, in camera tua.',
+   ok:false,
+   fb:'No. La copia privata vale per un originale che possiedi legalmente, non per una fonte illecita. E dietro un film ci sono centinaia di persone il cui lavoro viene pagato proprio da quelle visioni.'},
+
+  {q:'Trovi una bella immagine su Google, la stampi su magliette e le vendi al mercatino.',
+   ok:false,
+   fb:'No. Google è un motore di ricerca, non un archivio di immagini libere: mostra foto che appartengono a qualcuno. Venderle è un uso commerciale, il più delicato di tutti.'},
+
+  {q:'Registri una tua versione (cover) di una canzone famosa e la pubblichi.',
+   ok:false,
+   fb:'Non liberamente. L’esecuzione è tua, ma il testo e la musica restano di chi li ha scritti: serve una licenza. Molte piattaforme la gestiscono in automatico, ed è il motivo per cui su una cover compaiono i nomi degli autori originali.'},
+
+  {q:'Usi una foto con licenza CC BY-NC in una presentazione per la classe, citando l’autore.',
+   ok:true,
+   fb:'Sì. Una lezione non è un uso commerciale, quindi NC è rispettato, e citando l’autore hai rispettato BY. Attenzione però: se quella presentazione finisse dentro un prodotto venduto, la risposta cambierebbe.'}
+];
+
+var casiRisposte = 0;
+
+function buildCasi(){
+  var host = document.getElementById('casi-host');
+  CASI.forEach(function(c, i){
+    var d = document.createElement('div');
+    d.className = 'caso';
+    d.innerHTML =
+      '<div class="caso-q"><b>Caso ' + (i + 1) + '.</b> ' + c.q + '</div>' +
+      '<div class="caso-btns">' +
+        '<button class="caso-btn" data-v="1" type="button">Si può fare</button>' +
+        '<button class="caso-btn" data-v="0" type="button">Non si può</button>' +
+      '</div>' +
+      '<div class="caso-fb"></div>';
+
+    var btns = d.querySelectorAll('.caso-btn');
+    var fb = d.querySelector('.caso-fb');
+
+    btns.forEach(function(b){
+      b.addEventListener('click', function(){
+        var scelta = b.getAttribute('data-v') === '1';
+        var giusto = scelta === c.ok;
+        btns.forEach(function(x){ x.disabled = true; });
+        b.classList.add(giusto ? 'pick-ok' : 'pick-no');
+        fb.className = 'caso-fb show ' + (giusto ? 'good' : 'soft');
+        fb.innerHTML = '<b>' + (giusto ? 'Esatto.' : 'Non proprio.') + '</b> ' + c.fb;
+        casiRisposte++;
+        updateTally();
+      });
+    });
+
+    host.appendChild(d);
+  });
+  updateTally();
+}
+
+function updateTally(){
+  document.getElementById('casi-tally').textContent =
+    'Casi esaminati: ' + casiRisposte + ' su ' + CASI.length;
+}
+
+/* ============================================================
+   FLASHCARD
+   ============================================================ */
+var PAROLE = [
+  {t:'Opera', c:'Il concetto',
+   d:'Il risultato concreto di un atto creativo: una canzone, un disegno, una poesia, un video, un software. Anche il tema che hai consegnato lunedì.'},
+  {t:'Diritti morali', c:'I due diritti',
+   d:'Il legame fra te e la tua opera: essere riconosciuto autore, decidere se pubblicarla, opporti alle modifiche che la snaturano. Non si vendono e non scadono mai.'},
+  {t:'Diritti patrimoniali', c:'I due diritti',
+   d:'Il lato economico: riprodurre, distribuire, diffondere, tradurre. Si possono cedere a un editore o a un’etichetta e durano 70 anni dopo la morte dell’autore.'},
+  {t:'Pubblico dominio', c:'La scadenza',
+   d:'Quando i diritti patrimoniali sono scaduti, l’opera diventa di tutti: si può copiare, stampare, vendere, trasformare. L’autore va comunque nominato.'},
+  {t:'Copyright', c:'Le due tradizioni',
+   d:'Letteralmente “diritto di copia”. Tradizione anglosassone, centrata sull’opera come bene economico e su chi ne detiene lo sfruttamento.'},
+  {t:'Creative Commons', c:'Le licenze',
+   d:'Licenze standard, nate nel 2001, con cui l’autore dichiara in anticipo che cosa permette. Non rinuncia ai diritti: sceglie come condividerli.'},
+  {t:'CC0', c:'Le licenze',
+   d:'La rinuncia volontaria: l’autore mette l’opera in pubblico dominio subito, senza aspettare i 70 anni. Chiunque può farne qualsiasi cosa.'},
+  {t:'Plagio', c:'La linea sottile',
+   d:'Presentare come proprio il lavoro di un altro. Vale anche riscrivendolo con parole diverse senza dire da dove viene. È prima di tutto una questione di onestà.'},
+  {t:'Citazione', c:'La linea sottile',
+   d:'Riportare un brano altrui per studio, critica o discussione. Tre condizioni: breve, riconoscibile fra virgolette, con la fonte indicata. La legge la permette.'},
+  {t:'Licenza', c:'Gli strumenti',
+   d:'Il permesso scritto con cui il titolare dice che cosa si può fare con la sua opera, a quali condizioni e per quanto tempo.'},
+  {t:'Royalty', c:'Il denaro',
+   d:'La somma che spetta all’autore ogni volta che l’opera viene usata: uno streaming, un passaggio in radio, una copia venduta.'},
+  {t:'SIAE', c:'Il denaro',
+   d:'L’ente italiano che dal 1882 raccoglie i compensi dovuti agli autori e li redistribuisce. Serve perché un autore da solo non potrebbe controllare ogni uso della sua opera.'},
+  {t:'Brevetto', c:'Le frontiere',
+   d:'Protegge un’invenzione, cioè una soluzione tecnica. Va depositato, costa, viene esaminato e dura circa vent’anni. In cambio devi pubblicare come funziona.'},
+  {t:'Marchio', c:'Le frontiere',
+   d:'Il segno che distingue i prodotti di un’azienda: un nome, un logo. Si rinnova ogni dieci anni e, se lo rinnovi sempre, non scade mai.'},
+  {t:'NFT', c:'Le frontiere',
+   d:'Un certificato su blockchain che punta a un file. Comprarlo non significa comprare il diritto d’autore: possiedi il gettone, non l’opera.'}
+];
+
+function buildFlashcards(){
+  var host = document.getElementById('fc-host');
+  var g = document.createElement('div');
+  g.className = 'fcgrid';
+
+  PAROLE.forEach(function(p){
+    var b = document.createElement('button');
+    b.className = 'fc';
+    b.setAttribute('type', 'button');
+    b.setAttribute('aria-label', 'Carta: ' + p.t + '. Tocca per girare.');
+    b.innerHTML =
+      '<span class="fc-in">' +
+        '<span class="fc-f"><i>' + p.c + '</i><b>' + p.t + '</b>' +
+          '<span class="hint">tocca per girare</span></span>' +
+        '<span class="fc-b"><b>' + p.t + '</b><span>' + p.d + '</span></span>' +
+      '</span>';
+    b.addEventListener('click', function(){ b.classList.toggle('flip'); });
+    g.appendChild(b);
+  });
+
+  host.appendChild(g);
+
+  var n = document.createElement('p');
+  n.style.cssText = 'text-align:center;color:var(--muted);margin-top:18px;font-size:16px';
+  n.textContent = PAROLE.length + ' carte, raggruppate per tema.';
+  host.appendChild(n);
+}
+
+/* ============================================================
+   QUIZ — motore parametrico (classi, non id)
+   ============================================================ */
+var DOMANDE = [
+  {q:'Hai appena finito di scrivere una poesia sul quaderno. Da quando è protetta?',
+   o:['Da subito, nel momento in cui l’hai scritta',
+      'Solo dopo averla registrata presso un ente',
+      'Solo se ci metti il simbolo ©',
+      'Solo se viene pubblicata da un editore'],
+   c:0,
+   fb:'La protezione nasce nell’istante in cui l’opera viene espressa. Nessuna registrazione, nessun simbolo, nessun costo: è il principio della Convenzione di Berna.'},
+
+  {q:'Quale diritto un autore non può vendere né perdere, mai?',
+   o:['Il diritto di riprodurre l’opera',
+      'Il diritto di essere riconosciuto autore',
+      'Il diritto di tradurla',
+      'Il diritto di distribuirla'],
+   c:1,
+   fb:'È un diritto morale. Gli altri tre elencati sono patrimoniali: si cedono e scadono. Il legame con il nome dell’autore invece resta per sempre.'},
+
+  {q:'Quanto durano i diritti patrimoniali in Italia?',
+   o:['20 anni dalla pubblicazione',
+      'Per sempre',
+      '70 anni dopo la morte dell’autore',
+      'Finché l’autore è in vita'],
+   c:2,
+   fb:'Settant’anni dalla morte dell’autore. È il periodo in cui gli eredi possono ancora ricavarne un guadagno; dopo, l’opera entra in pubblico dominio.'},
+
+  {q:'Una sinfonia di Beethoven è in pubblico dominio. Puoi usare una qualsiasi registrazione come sottofondo?',
+   o:['Sì, tutto ciò che riguarda Beethoven è libero',
+      'No: la composizione è libera, ma quella registrazione è un’opera nuova e protetta',
+      'Sì, purché tu citi Beethoven',
+      'No, la musica classica non si può mai usare'],
+   c:1,
+   fb:'È la trappola più comune. La partitura è di tutti, ma l’esecuzione di un’orchestra registrata oggi è opera dei musicisti e dell’etichetta: protetta a sé.'},
+
+  {q:'Quale sigla c’è in tutte e sei le licenze Creative Commons?',
+   o:['NC', 'SA', 'BY', 'ND'],
+   c:2,
+   fb:'BY, l’attribuzione. Qualunque licenza CC tu scelga, chi usa l’opera deve citarti. È il minimo comune denominatore del sistema.'},
+
+  {q:'Che cosa significa la clausola SA (Share Alike)?',
+   o:['Che l’opera si può solo condividere, non modificare',
+      'Che chi modifica l’opera deve rilasciarla con la stessa licenza',
+      'Che l’opera è gratuita',
+      'Che serve il permesso dell’autore per ogni uso'],
+   c:1,
+   fb:'La libertà si trasmette a chi viene dopo: chi costruisce sulla tua opera deve lasciare agli altri le stesse possibilità. È il meccanismo che tiene aperta Wikipedia.'},
+
+  {q:'Riscrivi con parole tue un testo trovato online e lo consegni senza indicare la fonte. Che cos’è?',
+   o:['È corretto: non hai copiato le parole esatte',
+      'È plagio: hai presentato come tuo il lavoro di un altro',
+      'È una citazione',
+      'Dipende dalla lunghezza del testo'],
+   c:1,
+   fb:'Il plagio non riguarda solo le parole: riguarda le idee, la struttura, il ragionamento. Cambiare i sinonimi non cambia da chi viene il contenuto.'},
+
+  {q:'Quale di queste NON è una condizione della citazione legittima?',
+   o:['Essere un brano breve',
+      'Essere riconoscibile fra virgolette',
+      'Indicare autore e fonte',
+      'Avere il permesso scritto dell’autore'],
+   c:3,
+   fb:'Il permesso non serve: è proprio questo il punto della citazione. La legge la consente in anticipo, a patto che sia breve, riconoscibile e attribuita.'},
+
+  {q:'Che cosa protegge un brevetto, a differenza del diritto d’autore?',
+   o:['La forma in cui hai espresso un’idea',
+      'La soluzione tecnica, cioè come funziona un’invenzione',
+      'Il nome commerciale di un’azienda',
+      'Il diritto di essere citato'],
+   c:1,
+   fb:'È l’unico caso in cui si protegge l’idea e non la forma. Ma va depositato, costa, viene esaminato e dura circa vent’anni — l’opposto del diritto d’autore, che nasce gratis e da solo.'},
+
+  {q:'Compri un NFT collegato a un’opera digitale. Che cosa hai comprato?',
+   o:['Il diritto d’autore sull’opera',
+      'Il diritto di venderne copie',
+      'Il gettone registrato sulla blockchain, non i diritti sull’opera',
+      'Il diritto di impedire agli altri di guardarla'],
+   c:2,
+   fb:'Salvo che il contratto lo dica espressamente, l’NFT trasferisce il gettone, non il copyright. È la vecchia regola di sempre: possedere una copia non è avere i diritti — come per un libro che hai comprato.'}
+];
+
+function buildQuiz(host, domande){
+  var i = 0, punti = 0;
+
+  var el = document.createElement('div');
+  el.className = 'quiz';
+  el.innerHTML =
+    '<div class="qbar"><div class="qfill"></div></div>' +
+    '<div class="qbody">' +
+      '<div class="qstep"></div>' +
+      '<div class="qtext"></div>' +
+      '<div class="opts"></div>' +
+      '<div class="qfb"></div>' +
+      '<button class="btn qnext" type="button" style="display:none">Avanti</button>' +
+    '</div>' +
+    '<div class="qend">' +
+      '<div class="ring"><span></span></div>' +
+      '<div class="medal"></div>' +
+      '<p class="qmsg" style="color:var(--muted)"></p>' +
+      '<button class="btn ghost qretry" type="button">Rifai la verifica</button>' +
+    '</div>';
+  host.appendChild(el);
+
+  var qFill = el.querySelector('.qfill');
+  var qBody = el.querySelector('.qbody');
+  var qStep = el.querySelector('.qstep');
+  var qText = el.querySelector('.qtext');
+  var qOpts = el.querySelector('.opts');
+  var qFb   = el.querySelector('.qfb');
+  var qNext = el.querySelector('.qnext');
+  var qEnd  = el.querySelector('.qend');
+
+  var ok = getComputedStyle(document.documentElement).getPropertyValue('--ok').trim() || '#1B6B3A';
+  var wa = getComputedStyle(document.documentElement).getPropertyValue('--warn').trim() || '#B8860B';
+
+  function render(){
+    var d = domande[i];
+    qStep.textContent = 'Domanda ' + (i + 1) + ' di ' + domande.length;
+    qText.textContent = d.q;
+    qFill.style.width = (i / domande.length * 100) + '%';
+    qFb.className = 'qfb';
+    qNext.style.display = 'none';
+    qOpts.innerHTML = '';
+
+    d.o.forEach(function(testo, k){
+      var b = document.createElement('button');
+      b.className = 'opt';
+      b.setAttribute('type', 'button');
+      b.innerHTML = '<span class="mark"></span><span>' + testo + '</span>';
+      b.addEventListener('click', function(){ rispondi(k); });
+      qOpts.appendChild(b);
+    });
+  }
+
+  function rispondi(k){
+    var d = domande[i];
+    var giusto = k === d.c;
+    if(giusto) punti++;
+
+    var opts = qOpts.querySelectorAll('.opt');
+    opts.forEach(function(b, idx){
+      b.disabled = true;
+      if(idx === d.c){
+        b.classList.add('good');
+        b.querySelector('.mark').outerHTML = svgCheck(ok);
+      } else if(idx === k){
+        b.classList.add('soft');
+        b.querySelector('.mark').outerHTML = svgMinus(wa);
+      }
+    });
+
+    qFb.className = 'qfb show ' + (giusto ? 'good' : 'soft');
+    qFb.innerHTML = '<b>' + (giusto ? 'Giusto.' : 'Ci siamo quasi.') + '</b> ' + d.fb;
+    qNext.style.display = 'inline-block';
+    qNext.textContent = (i === domande.length - 1) ? 'Vedi il risultato' : 'Avanti';
+  }
+
+  qNext.addEventListener('click', function(){
+    i++;
+    if(i >= domande.length){ fine(); } else { render(); }
+  });
+
+  function fine(){
+    qBody.style.display = 'none';
+    qFill.style.width = '100%';
+    qEnd.classList.add('show');
+
+    var perc = Math.round(punti / domande.length * 100);
+    var ring = qEnd.querySelector('.ring');
+    ring.style.background = 'conic-gradient(var(--blu) ' + (perc * 3.6) + 'deg, var(--warm) 0deg)';
+    ring.querySelector('span').textContent = perc + '%';
+
+    var medaglia, msg;
+    if(perc >= 88){
+      medaglia = 'Hai il quadro completo';
+      msg = 'Sai distinguere i due diritti, riconosci il pubblico dominio e leggi una licenza. Vai alla chiusura: c’è ancora un anello da chiudere.';
+    } else if(perc >= 60){
+      medaglia = 'Ci sei quasi';
+      msg = 'Le basi ci sono. Rileggi le spiegazioni delle domande che ti sono sfuggite: quasi sempre riguardano lo stesso punto, la differenza fra opera e sua esecuzione.';
+    } else {
+      medaglia = 'Vale la pena tornarci';
+      msg = 'Nessun problema: è materia che si sistema rileggendo. Torna alla sezione “Il principio” e al costruttore di licenza, poi riprova.';
+    }
+    qEnd.querySelector('.medal').textContent = medaglia;
+    qEnd.querySelector('.qmsg').textContent = msg;
+  }
+
+  qEnd.querySelector('.qretry').addEventListener('click', function(){
+    i = 0; punti = 0;
+    qEnd.classList.remove('show');
+    qBody.style.display = 'block';
+    render();
+  });
+
+  render();
+}
+
+/* ============================================================
+   Salvataggio risposte aperte (solo localStorage)
+   ============================================================ */
+function initImpegni(){
+  document.querySelectorAll('textarea.impegno').forEach(function(t){
+    var key = 'copyright:' + t.getAttribute('data-key');
+    var out = document.querySelector('.saved[data-for="' + t.getAttribute('data-key') + '"]');
+    var saved = null;
+    try{ saved = localStorage.getItem(key); }catch(e){}
+    if(saved){
+      t.value = saved;
+      if(out) out.textContent = 'Salvato su questo dispositivo.';
+    }
+    var timer = null;
+    t.addEventListener('input', function(){
+      clearTimeout(timer);
+      timer = setTimeout(function(){
+        try{ localStorage.setItem(key, t.value); }catch(e){}
+        if(out){
+          out.textContent = t.value.trim() ? 'Salvato su questo dispositivo.' : '';
+        }
+      }, 500);
+    });
+  });
+}
+
+/* ============================================================
+   Modal docenti
+   ============================================================ */
+function initModal(){
+  var m = document.getElementById('modal');
+  document.getElementById('doc-open').addEventListener('click', function(){ m.classList.add('on'); });
+  document.getElementById('doc-close').addEventListener('click', function(){ m.classList.remove('on'); });
+  m.addEventListener('click', function(e){ if(e.target === m) m.classList.remove('on'); });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') m.classList.remove('on');
+  });
+  document.querySelectorAll('.mtab').forEach(function(t){
+    t.addEventListener('click', function(){
+      document.querySelectorAll('.mtab').forEach(function(x){ x.classList.remove('active'); });
+      document.querySelectorAll('.mpane').forEach(function(x){ x.classList.remove('on'); });
+      t.classList.add('active');
+      document.getElementById(t.getAttribute('data-p')).classList.add('on');
+    });
+  });
+}
+
+/* ---------- Avvio ---------- */
+buildNav();
+buildVideo();
+buildCC();
+buildCasi();
+buildFlashcards();
+buildQuiz(document.getElementById('quiz-host'), DOMANDE);
+document.getElementById('q-tot').textContent = DOMANDE.length;
+initImpegni();
+initModal();
+</script>
+</body>
+</html>
